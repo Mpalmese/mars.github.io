@@ -25,47 +25,35 @@
     <div class="row" id="mars-featured-img">
       <div class="col-md-8">
         <h3 class="heading">Featured Mars Image</h3>
-        <img width="600" src="{{mars.featured_image_url}}"/>
+        <img width="700" src="{{mars.featured_image_url}}"/>
       </div>
       <div class="col-md-4">
         <h4 class="heading" id="mars-weather">Current Weather on Mars</h4>
         <p>{{mars.mars_weather}}</p>
         <br>
         <h4 class="heading" id="mars-facts">Mars Facts</h4>
-        {{mars.mars_facts}}
+        {{mars.mars_facts|safe}}
+      </div>
+    </div>
+    <div class="row" id="mars-hemispheres">
+      <h3 style="text-align: center" class="header">Mars Hemispheres</h3>
+      <div class="col-md-6">
+          <img style="padding:3px;" width="500" src="{{mars.hemisphere_image_urls[0].img_url}}"/></li>
+          <figcaption style="font-weight: bold">Valles Marineris Hemisphere Enhanced</figcaption>
+      </div>
+      <div class="col-md-6">
+          <img style="padding:3px;" width="500" src="{{mars.hemisphere_image_urls[1].img_url}}"/></li>
+          <figcaption style="font-weight: bold">Cerberus Hemisphere Enhanced</figcaption>
       </div>
     </div>
     <div class="row" id="mars-hemispheres">
       <div class="col-md-6">
-        <h3 style="text-align:center" class="heading">Mars Hemispheres</h3>
-        <ul>
-          <li style="float:left; padding:3px; list-style:none"><img width="325" src="{{mars.hemisphere_image_urls[0].img_url}}"/></li>
-          <li style="float:left; padding:3px; list-style:none"><img width="325" src="{{mars.hemisphere_image_urls[1].img_url}}"/></li>
-        </ul>
+          <img style="padding:3px;" width="500" src="{{mars.hemisphere_image_urls[2].img_url}}"/></li>
+          <figcaption style="font-weight: bold">Schiaparelli Hemisphere Enhanced</figcaption>
       </div>
-    </div>
-    <div class="row" id="mars-hemispheres">
       <div class="col-md-6">
-        <ul>
-          <li style="float:left; list-style:none; margin-right:90px">Valles Marineris Hemisphere Enhanced</li>
-          <li style="float:left; list-style:none">Cerberus Hemisphere Enhanced</li>
-        </ul>
-      </div>
-    </div>
-    <div class="row" id="mars-hemispheres">
-      <div class="col-md-6">
-        <ul>
-          <li style="float:left; padding:3px; list-style:none"><img width="325" src="{{mars.hemisphere_image_urls[2].img_url}}"/></li>
-          <li style="float:left; padding:3px; list-style:none"><img width="325" src="{{mars.hemisphere_image_urls[3].img_url}}"/></li>
-        </ul>
-      </div>
-    </div>
-    <div class="row" id="mars-hemispheres">
-      <div class="col-md-6">
-        <ul>
-          <li style="float:left; list-style:none; margin-right:115px">Schiaparelli Hemisphere Enhanced</li>
-          <li style="float:left; list-style:none">Syrtis Major Hemisphere Enhanced</li>
-        </ul>
+          <img style="padding:3px" width="500" src="{{mars.hemisphere_image_urls[3].img_url}}"/></li>
+          <figcaption style="font-weight: bold">Syrtis Major Hemisphere Enhanced</figcaption>
       </div>
     </div>
   </div>

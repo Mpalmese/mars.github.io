@@ -61,17 +61,11 @@ def scrape():
     table = pd.read_html(url)
 
 
-
-
     df = table[0]
     df.columns = ['Description', 'Value']
     df.set_index('Description', inplace=True)
 
-
-
-
     mars_html_table = df.to_html()
-
 
 
     mars_html_table = mars_html_table.replace('\n', '')
